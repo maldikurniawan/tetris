@@ -19,7 +19,7 @@ const Tetris = ({ rows, columns, setGameOver }) => {
   });
 
   return (
-    <div>
+    <div className="my-4">
       <Board board={board} />
       <GameStats gameStats={gameStats} />
       <Previews tetrominoes={player.tetrominoes} />

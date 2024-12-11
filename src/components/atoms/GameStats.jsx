@@ -5,13 +5,17 @@ const GameStats = ({ gameStats }) => {
   const linesToLevel = linesPerLevel - linesCompleted;
 
   return (
-    <ul className="GameStats GameStats__right">
-      <li>Level</li>
-      <li className="value">{level}</li>
-      <li>Lines to level</li>
-      <li className="value">{linesToLevel}</li>
-      <li>Points</li>
-      <li className="value">{points}</li>
+    <ul className="absolute top-[220px] right-5 bg-opacity-90 text-white p-4 rounded-lg shadow-md w-16">
+      <li className="text-xs font-semibold text-gray-400 uppercase">Level</li>
+      <li className="text-md font-bold text-white mb-4">{level}</li>
+
+      <li className="text-xs font-semibold text-gray-400 uppercase">
+        Lines to level
+      </li>
+      <li className="text-md font-bold text-white mb-4">{linesToLevel}</li>
+
+      <li className="text-xs font-semibold text-gray-400 uppercase">Points</li>
+      <li className="text-md font-bold text-white">{points}</li>
     </ul>
   );
 };
