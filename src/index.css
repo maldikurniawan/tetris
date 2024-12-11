@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 * {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
-.App {
-    font-family: sans-serif;
-    text-align: center;
-    color: #fff;
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     background-color: #406;
-    height: 100vh;
-    padding: 20px;
 }
 
 .Board {
@@ -90,11 +88,6 @@
     background-color: rgba(240, 80, 195, 1);
 }
 
-.GameController {
-    position: absolute;
-    top: -100em;
-}
-
 .GameStats {
     position: absolute;
     width: 305px;
@@ -153,8 +146,4 @@
     grid-template-columns: repeat(4, 1fr);
     width: 60px;
     height: 60px;
-}
-
-.Tetris {
-    position: relative;
 }
