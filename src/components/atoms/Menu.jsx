@@ -1,7 +1,7 @@
 const Menu = ({ onClick }) => {
   return (
     <div
-      className="relative flex items-center justify-center h-screen bg-cover bg-center max-w-sm mx-auto"
+      className="relative flex items-center overflow-hidden justify-center h-screen bg-cover bg-center max-w-sm mx-auto"
       style={{ backgroundImage: "url('assets/images/tetris.jpeg')" }}
     >
       {/* Background Overlay */}
@@ -9,7 +9,7 @@ const Menu = ({ onClick }) => {
 
       {/* Main Menu */}
       <div className="relative z-10 text-center rounded-lg shadow-lg">
-        <h1 className="text-5xl mb-[340px] font-extrabold bg-gradient-to-r from-red-600 via-green-600 to-blue-600 inline-block text-transparent bg-clip-text tracking-widest">TETRIS</h1>
+        <h1 className="text-5xl mb-[420px] font-extrabold bg-gradient-to-r from-red-600 via-green-600 to-blue-600 inline-block text-transparent bg-clip-text tracking-widest">TETRIS</h1>
 
         <button
           onClick={onClick}
