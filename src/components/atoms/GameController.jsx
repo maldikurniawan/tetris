@@ -1,5 +1,6 @@
 import { Action, actionIsDrop } from "../controls/Input";
 import { playerController } from "../controls/PlayerController";
+
 import { useDropTime } from "../../hooks/useDropTime";
 import { useInterval } from "../../hooks/useInterval";
 import { FaAngleDoubleDown, FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaPause } from "react-icons/fa";
@@ -10,8 +11,7 @@ const GameController = ({
   gameStats,
   player,
   setGameOver,
-  setPlayer,
-  backgroundMusicRef // Pass the ref to control music
+  setPlayer
 }) => {
   const [dropTime, pauseDropTime, resumeDropTime] = useDropTime({
     gameStats
@@ -35,26 +35,11 @@ const GameController = ({
     if (action === Action.Pause) {
       if (dropTime) {
         pauseDropTime();
-        // Pause the background music when game is paused
-        if (backgroundMusicRef.current) {
-          backgroundMusicRef.current.pause();
-        }
       } else {
         resumeDropTime();
-        // Resume the background music when game is resumed
-        if (backgroundMusicRef.current) {
-          backgroundMusicRef.current.play().catch((error) => {
-            console.warn("Background music could not be played:", error);
-          });
-        }
       }
     } else if (action === Action.Quit) {
       setGameOver(true);
-      // Pause the music when the game ends
-      if (backgroundMusicRef.current) {
-        backgroundMusicRef.current.pause();
-        backgroundMusicRef.current.currentTime = 0; // Reset music
-      }
     } else {
       if (actionIsDrop(action)) {
         // Handle drop actions directly without affecting the drop timer.
