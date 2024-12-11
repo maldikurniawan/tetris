@@ -19,7 +19,7 @@ const Game = ({ rows, columns }) => {
   useEffect(() => {
     if (gameOver && backgroundMusicRef.current) {
       backgroundMusicRef.current.pause();
-      backgroundMusicRef.current.currentTime = 0; // Reset music to the start
+      backgroundMusicRef.current.currentTime = 0;
     }
   }, [gameOver]);
 
