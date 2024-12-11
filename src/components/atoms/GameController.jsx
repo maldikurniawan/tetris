@@ -3,7 +3,8 @@ import { playerController } from "../controls/PlayerController";
 
 import { useDropTime } from "../../hooks/useDropTime";
 import { useInterval } from "../../hooks/useInterval";
-import { FaAngleDoubleDown, FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaPause, FaPlay } from "react-icons/fa";
+import { FaAngleDoubleDown, FaArrowDown, FaArrowLeft, FaArrowRight, FaArrowUp, FaPause } from "react-icons/fa";
+import { FaHouseChimney } from "react-icons/fa6";
 
 const GameController = ({
   board,
@@ -51,7 +52,7 @@ const GameController = ({
 
   return (
     <div>
-      <div className="absolute left-6 bottom-10 flex flex-col justify-center items-center gap-4">
+      <div className="absolute left-6 bottom-2 flex flex-col justify-center items-center gap-4">
         <div className="flex gap-4">
           <button
             className="bg-purple-500 p-2 text-white rounded-full shadow hover:bg-purple-600 focus:outline-none"
@@ -89,7 +90,7 @@ const GameController = ({
           </button>
         </div>
       </div>
-      <div className="absolute right-6 bottom-20">
+      <div className="absolute right-6 bottom-10">
         <div className="flex gap-4">
           <button
             className="bg-yellow-500 p-4 text-white rounded-full shadow hover:bg-yellow-600 focus:outline-none"
@@ -101,7 +102,7 @@ const GameController = ({
             className="bg-red-500 p-4 text-white rounded-full shadow hover:bg-red-600 focus:outline-none"
             onClick={() => handleButtonClick(Action.Quit)}
           >
-            <FaPlay className="w-6 h-6" />
+            <FaHouseChimney className="w-6 h-6" />
           </button>
         </div>
       </div>
