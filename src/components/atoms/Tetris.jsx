@@ -19,7 +19,7 @@ const Tetris = ({ rows, columns, setGameOver }) => {
   });
 
   return (
-    <div className="my-4 pb-[145px]">
+    <div className="my-2 max-h-screen">
       <Board board={board} />
       <GameStats gameStats={gameStats} />
       <Previews tetrominoes={player.tetrominoes} />
