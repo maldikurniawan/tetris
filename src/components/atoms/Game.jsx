@@ -1,6 +1,6 @@
 import { Menu, Tetris } from "@/components";
 import { useGameOver } from "../../hooks/useGameOver";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
 const Game = ({ rows, columns }) => {
   const [gameOver, setGameOver, resetGameOver] = useGameOver();

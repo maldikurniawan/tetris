@@ -5,7 +5,7 @@ const GameStats = ({ gameStats }) => {
   const linesToLevel = linesPerLevel - linesCompleted;
 
   return (
-    <ul className="absolute top-[220px] right-5 bg-opacity-90 text-white p-4 rounded-lg shadow-md w-16">
+    <ul className="absolute top-[260px] right-5 bg-opacity-90 text-white p-4 max-[450px]:w-16">
       <li className="text-xs font-semibold text-gray-400 uppercase">Level</li>
       <li className="text-md font-bold text-white mb-4">{level}</li>
 

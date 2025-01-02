@@ -12,7 +12,7 @@ const Preview = ({ tetromino, index }) => {
   const board = buildBoard({ rows: 4, columns: 4 });
 
   // Dynamic positioning
-  const style = { top: `${index * 4}rem` };
+  const style = { top: `${index * 5}rem` };
 
   // Transfer tetromino to the board
   board.rows = transferToBoard({
@@ -25,7 +25,7 @@ const Preview = ({ tetromino, index }) => {
 
   return (
     <div
-      className="absolute border border-purple-600 right-3 rounded-lg mt-4 p-2 flex justify-center items-center"
+      className="absolute border border-purple-600 max-[450px]:right-3 right-14 rounded-lg mt-4 p-2 flex justify-center items-center"
       style={style}
     >
       <div className="Preview-board">

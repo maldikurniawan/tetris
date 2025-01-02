@@ -51,8 +51,8 @@ const GameController = ({
   };
 
   return (
-    <div>
-      <div className="absolute left-6 bottom-2 flex flex-col justify-center items-center gap-2">
+    <div className="relative">
+      <div className="absolute left-4 bottom-[-160px] flex flex-col justify-center items-center gap-2">
         <div className="flex">
           <button
             className="bg-purple-500 p-2 text-white rounded-full shadow hover:bg-purple-600 focus:outline-none"
@@ -90,21 +90,19 @@ const GameController = ({
           </button>
         </div>
       </div>
-      <div className="absolute right-6 bottom-12">
-        <div className="flex gap-4">
-          <button
-            className="bg-yellow-500 p-4 text-white rounded-full shadow hover:bg-yellow-600 focus:outline-none"
-            onClick={() => handleButtonClick(Action.Pause)}
-          >
-            <FaPause className="w-6 h-6" />
-          </button>
-          <button
-            className="bg-red-500 p-4 text-white rounded-full shadow hover:bg-red-600 focus:outline-none"
-            onClick={() => handleButtonClick(Action.Quit)}
-          >
-            <FaHouseChimney className="w-6 h-6" />
-          </button>
-        </div>
+      <div className="absolute right-4 bottom-[-120px] flex gap-4">
+        <button
+          className="bg-yellow-500 p-4 text-white rounded-full shadow hover:bg-yellow-600 focus:outline-none"
+          onClick={() => handleButtonClick(Action.Pause)}
+        >
+          <FaPause className="w-6 h-6" />
+        </button>
+        <button
+          className="bg-red-500 p-4 text-white rounded-full shadow hover:bg-red-600 focus:outline-none"
+          onClick={() => handleButtonClick(Action.Quit)}
+        >
+          <FaHouseChimney className="w-6 h-6" />
+        </button>
       </div>
     </div>
   );
